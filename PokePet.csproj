@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BFD3E824-45AE-48F0-BEF0-34AA6F540085}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PokePet</RootNamespace>
+    <AssemblyName>Pokegochi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pk.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Coleccion de Pets.cs" />
+    <Compile Include="Entrenador.cs" />
+    <Compile Include="Estadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas.Designer.cs">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estado.Designer.cs">
+      <DependentUpon>Estado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guarderia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guarderia.Designer.cs">
+      <DependentUpon>Guarderia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Huevo.cs" />
+    <Compile Include="Item_bd.cs" />
+    <Compile Include="Mochila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mochila.Designer.cs">
+      <DependentUpon>Mochila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crear.Designer.cs">
+      <DependentUpon>Crear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item.cs" />
+    <Compile Include="Jugar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jugar.Designer.cs">
+      <DependentUpon>Jugar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones.Designer.cs">
+      <DependentUpon>Opciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PokeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PokeInfo.Designer.cs">
+      <DependentUpon>PokeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pokemon.cs" />
+    <Compile Include="PokePC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PokePC.Designer.cs">
+      <DependentUpon>PokePC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="poke_bd.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pet.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tienda.Designer.cs">
+      <DependentUpon>Tienda.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Estadisticas.resx">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estado.resx">
+      <DependentUpon>Estado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guarderia.resx">
+      <DependentUpon>Guarderia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mochila.resx">
+      <DependentUpon>Mochila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crear.resx">
+      <DependentUpon>Crear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jugar.resx">
+      <DependentUpon>Jugar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones.resx">
+      <DependentUpon>Opciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PokeInfo.resx">
+      <DependentUpon>PokeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PokePC.resx">
+      <DependentUpon>PokePC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tienda.resx">
+      <DependentUpon>Tienda.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minipokes\_1Bulbasaur_mini.png" />
+    <Content Include="pk.ico" />
+    <Content Include="Resources\icons\Backpack.gif" />
+    <Content Include="Resources\icons\bubbles.gif" />
+    <Content Include="Resources\icons\DQXRo3m.png" />
+    <None Include="Resources\icons\estado1.png" />
+    <None Include="Resources\icons\estado2.png" />
+    <None Include="Resources\icons\estado3.png" />
+    <None Include="Resources\icons\estado4.png" />
+    <None Include="Resources\icons\estado5.png" />
+    <Content Include="Resources\icons\joystick.gif" />
+    <Content Include="Resources\icons\latest.gif" />
+    <Content Include="Resources\icons\light.png" />
+    <None Include="Resources\icons\lightoff.png" />
+    <Content Include="Resources\icons\pc.gif" />
+    <None Include="Resources\icons\pk.ico" />
+    <None Include="Resources\icons\skill_hada.png" />
+    <None Include="Resources\icons\skill_hielo.png" />
+    <None Include="Resources\icons\skill_hoja.png" />
+    <None Include="Resources\icons\skill_normal.png" />
+    <None Include="Resources\icons\skill_oscuro.png" />
+    <None Include="Resources\icons\skill_psiquico.png" />
+    <None Include="Resources\icons\skill_roca.png" />
+    <None Include="Resources\icons\skill_tierra.png" />
+    <None Include="Resources\icons\skill_veneno.png" />
+    <None Include="Resources\icons\skill_volador.png" />
+    <None Include="Resources\icons\skill_acero.png" />
+    <None Include="Resources\icons\skill_agua.png" />
+    <None Include="Resources\icons\skill_bicho.png" />
+    <None Include="Resources\icons\skill_dragon.png" />
+    <None Include="Resources\icons\skill_electrico.png" />
+    <None Include="Resources\icons\skill_fantasma.png" />
+    <None Include="Resources\icons\skill_fight.png" />
+    <None Include="Resources\icons\skill_fuego.png" />
+    <None Include="Resources\icon_save.png" />
+    <None Include="Resources\icon_load.png" />
+    <None Include="Resources\icon_est.png" />
+    <None Include="Resources\icon_conf.png" />
+    <None Include="Resources\icon_tienda.png" />
+    <None Include="Resources\icon_mochila.png" />
+    <None Include="Resources\icon_pc.png" />
+    <None Include="Resources\icon_pk.png" />
+    <Content Include="Resources\items\carameloraro.png" />
+    <None Include="Resources\items\item_Lagro.png" />
+    <None Include="Resources\items\item_Meloc.png" />
+    <None Include="Resources\items\item_Oram.png" />
+    <None Include="Resources\items\item_Perasi.png" />
+    <None Include="Resources\items\item_Safre.png" />
+    <None Include="Resources\items\item_Zreza.png" />
+    <None Include="Resources\items\Piedra_agua.png" />
+    <None Include="Resources\items\Piedra_fuego.png" />
+    <None Include="Resources\items\Piedra_hoja.png" />
+    <None Include="Resources\items\Piedra_lunar.png" />
+    <None Include="Resources\items\Piedra_trueno.png" />
+    <None Include="Resources\items\item_arcoiris.png" />
+    <None Include="Resources\items\item_Atania.png" />
+    <None Include="Resources\items\item_cuboamarillo.png" />
+    <None Include="Resources\items\item_cuboazul.png" />
+    <None Include="Resources\items\item_cuborojo.png" />
+    <None Include="Resources\items\item_Frambu.png" />
+    <None Include="Resources\items\masterball.png" />
+    <None Include="Resources\items\Hiperpoción.png" />
+    <None Include="Resources\items\Huevo.png" />
+    <Content Include="Resources\items\pizza.gif" />
+    <None Include="Resources\items\Poción_máxima.png" />
+    <Content Include="Resources\items\pokeball.png" />
+    <Content Include="Resources\items\potion.png" />
+    <None Include="Resources\items\Restaurar_todo.png" />
+    <Content Include="Resources\items\superpotion.png" />
+    <None Include="Resources\minipokes\Abra_icon.png" />
+    <None Include="Resources\minipokes\Aerodactyl_icon.png" />
+    <None Include="Resources\minipokes\Alakazam_icon.png" />
+    <None Include="Resources\minipokes\Arbok_icon.png" />
+    <Content Include="Resources\minipokes\Arbok_mini.gif" />
+    <None Include="Resources\minipokes\Arcanine_icon.png" />
+    <None Include="Resources\minipokes\Articuno_icon.png" />
+    <None Include="Resources\minipokes\Beedrill_icon.png" />
+    <Content Include="Resources\minipokes\Beedrill_mini.gif" />
+    <None Include="Resources\minipokes\Bellsprout_icon.png" />
+    <None Include="Resources\minipokes\Blastoise_icon.png" />
+    <Content Include="Resources\minipokes\Blastoise_mini.gif" />
+    <Content Include="Resources\minipokes\Bulbasaur_mini.gif" />
+    <None Include="Resources\minipokes\Butterfree_icon.png" />
+    <Content Include="Resources\minipokes\Butterfree_mini.gif" />
+    <None Include="Resources\minipokes\Caterpie_icon.png" />
+    <Content Include="Resources\minipokes\Caterpie_mini.gif" />
+    <None Include="Resources\minipokes\Chansey_icon.png" />
+    <None Include="Resources\minipokes\Charizard_icon.png" />
+    <Content Include="Resources\minipokes\Charizard_mini.gif" />
+    <None Include="Resources\minipokes\Charmander_icon.png" />
+    <Content Include="Resources\minipokes\Charmander_mini.gif" />
+    <None Include="Resources\minipokes\Charmeleon_icon.png" />
+    <Content Include="Resources\minipokes\Charmeleon_mini.gif" />
+    <None Include="Resources\minipokes\Clefable_icon.png" />
+    <None Include="Resources\minipokes\Clefairy_icon.png" />
+    <None Include="Resources\minipokes\Cloyster_icon.png" />
+    <None Include="Resources\minipokes\Cubone_icon.png" />
+    <None Include="Resources\minipokes\Dewgong_icon.png" />
+    <None Include="Resources\minipokes\Diglett_icon.png" />
+    <None Include="Resources\minipokes\Ditto_icon.png" />
+    <None Include="Resources\minipokes\Dodrio_icon.png" />
+    <None Include="Resources\minipokes\Doduo_icon.png" />
+    <None Include="Resources\minipokes\Dragonair_icon.png" />
+    <None Include="Resources\minipokes\Dragonite_icon.png" />
+    <None Include="Resources\minipokes\Dratini_icon.png" />
+    <None Include="Resources\minipokes\Drowzee_icon.png" />
+    <None Include="Resources\minipokes\Dugtrio_icon.png" />
+    <None Include="Resources\minipokes\Eevee_icon.png" />
+    <None Include="Resources\minipokes\Ekans_icon.png" />
+    <Content Include="Resources\minipokes\Ekans_mini.gif" />
+    <None Include="Resources\minipokes\Electabuzz_icon.png" />
+    <None Include="Resources\minipokes\Electrode_icon.png" />
+    <None Include="Resources\minipokes\Exeggcute_icon.png" />
+    <None Include="Resources\minipokes\Exeggutor_icon.png" />
+    <None Include="Resources\minipokes\Farfetch%27d_icon.png" />
+    <None Include="Resources\minipokes\Fearow_icon.png" />
+    <Content Include="Resources\minipokes\Fearow_mini.gif" />
+    <None Include="Resources\minipokes\Flareon_icon.png" />
+    <None Include="Resources\minipokes\Gastly_icon.png" />
+    <None Include="Resources\minipokes\Gengar_icon.png" />
+    <None Include="Resources\minipokes\Geodude_icon.png" />
+    <None Include="Resources\minipokes\Gloom_icon.png" />
+    <None Include="Resources\minipokes\Golbat_icon.png" />
+    <None Include="Resources\minipokes\Goldeen_icon.png" />
+    <None Include="Resources\minipokes\Golduck_icon.png" />
+    <None Include="Resources\minipokes\Golem_icon.png" />
+    <None Include="Resources\minipokes\Graveler_icon.png" />
+    <None Include="Resources\minipokes\Grimer_icon.png" />
+    <None Include="Resources\minipokes\Growlithe_icon.png" />
+    <None Include="Resources\minipokes\Gyarados_icon.png" />
+    <None Include="Resources\minipokes\Haunter_icon.png" />
+    <None Include="Resources\minipokes\Hitmonchan_icon.png" />
+    <None Include="Resources\minipokes\Hitmonlee_icon.png" />
+    <None Include="Resources\minipokes\Horsea_icon.png" />
+    <None Include="Resources\minipokes\Hypno_icon.png" />
+    <None Include="Resources\minipokes\Ivysaur_icon.png" />
+    <Content Include="Resources\minipokes\ivysaur_mini.gif" />
+    <None Include="Resources\minipokes\Jigglypuff_icon.png" />
+    <None Include="Resources\minipokes\Jolteon_icon.png" />
+    <None Include="Resources\minipokes\Jynx_icon.png" />
+    <None Include="Resources\minipokes\Kabuto_icon.png" />
+    <None Include="Resources\minipokes\Kabutops_icon.png" />
+    <None Include="Resources\minipokes\Kadabra_icon.png" />
+    <None Include="Resources\minipokes\Kakuna_icon.png" />
+    <Content Include="Resources\minipokes\Kakuna_mini.gif" />
+    <None Include="Resources\minipokes\Kangaskhan_icon.png" />
+    <None Include="Resources\minipokes\Kingler_icon.png" />
+    <None Include="Resources\minipokes\Koffing_icon.png" />
+    <None Include="Resources\minipokes\Krabby_icon.png" />
+    <None Include="Resources\minipokes\Lapras_icon.png" />
+    <None Include="Resources\minipokes\Lickitung_icon.png" />
+    <None Include="Resources\minipokes\Machamp_icon.png" />
+    <None Include="Resources\minipokes\Machoke_icon.png" />
+    <None Include="Resources\minipokes\Machop_icon.png" />
+    <None Include="Resources\minipokes\Magikarp_icon.png" />
+    <None Include="Resources\minipokes\Magmar_icon.png" />
+    <None Include="Resources\minipokes\Magnemite_icon.png" />
+    <None Include="Resources\minipokes\Magneton_icon.png" />
+    <None Include="Resources\minipokes\Mankey_icon.png" />
+    <None Include="Resources\minipokes\Marowak_icon.png" />
+    <None Include="Resources\minipokes\Meloetta_danza_icon.png" />
+    <None Include="Resources\minipokes\Meloetta_lírica_icon.png" />
+    <None Include="Resources\minipokes\Meowth_icon.png" />
+    <None Include="Resources\minipokes\Metapod_icon.png" />
+    <Content Include="Resources\minipokes\Metapod_mini.gif" />
+    <None Include="Resources\minipokes\Mew_icon.png" />
+    <None Include="Resources\minipokes\Mewtwo_icon.png" />
+    <None Include="Resources\minipokes\Moltres_icon.png" />
+    <None Include="Resources\minipokes\Mr._Mime_icon.png" />
+    <None Include="Resources\minipokes\Muk_icon.png" />
+    <None Include="Resources\minipokes\Nidoking_icon.png" />
+    <None Include="Resources\minipokes\Nidoqueen_icon.png" />
+    <Content Include="Resources\minipokes\Nidoqueen_mini.gif" />
+    <None Include="Resources\minipokes\Nidoran_f_icon.png" />
+    <Content Include="Resources\minipokes\Nidoran_f_mini.gif" />
+    <None Include="Resources\minipokes\Nidoran_icon.png" />
+    <None Include="Resources\minipokes\Nidorina_icon.png" />
+    <Content Include="Resources\minipokes\Nidorina_mini.gif" />
+    <None Include="Resources\minipokes\Nidorino_icon.png" />
+    <None Include="Resources\minipokes\Ninetales_icon.png" />
+    <None Include="Resources\minipokes\Oddish_icon.png" />
+    <None Include="Resources\minipokes\Omanyte_icon.png" />
+    <None Include="Resources\minipokes\Omastar_icon.png" />
+    <None Include="Resources\minipokes\Onix_icon.png" />
+    <None Include="Resources\minipokes\Paras_icon.png" />
+    <None Include="Resources\minipokes\Parasect_icon.png" />
+    <None Include="Resources\minipokes\Persian_icon.png" />
+    <None Include="Resources\minipokes\Pidgeotto_icon.png" />
+    <Content Include="Resources\minipokes\Pidgeotto_mini.gif" />
+    <None Include="Resources\minipokes\Pidgeot_icon.png" />
+    <Content Include="Resources\minipokes\Pidgeot_mini.gif" />
+    <None Include="Resources\minipokes\Pidgey_icon.png" />
+    <Content Include="Resources\minipokes\Pidgey_mini.gif" />
+    <None Include="Resources\minipokes\Pikachu_icon.png" />
+    <Content Include="Resources\minipokes\Pikachu_mini.gif" />
+    <None Include="Resources\minipokes\Pinsir_icon.png" />
+    <None Include="Resources\minipokes\Poliwag_icon.png" />
+    <None Include="Resources\minipokes\Poliwhirl_icon.png" />
+    <None Include="Resources\minipokes\Poliwrath_icon.png" />
+    <None Include="Resources\minipokes\Ponyta_icon.png" />
+    <None Include="Resources\minipokes\Porygon_icon.png" />
+    <None Include="Resources\minipokes\Primeape_icon.png" />
+    <None Include="Resources\minipokes\Psyduck_icon.png" />
+    <None Include="Resources\minipokes\Raichu_icon.png" />
+    <Content Include="Resources\minipokes\Raichu_mini.gif" />
+    <None Include="Resources\minipokes\Rapidash_icon.png" />
+    <None Include="Resources\minipokes\Raticate_icon.png" />
+    <Content Include="Resources\minipokes\Raticate_mini.gif" />
+    <None Include="Resources\minipokes\Rattata_icon.png" />
+    <Content Include="Resources\minipokes\Rattata_mini.gif" />
+    <None Include="Resources\minipokes\Rhydon_icon.png" />
+    <None Include="Resources\minipokes\Rhyhorn_icon.png" />
+    <None Include="Resources\minipokes\Sandshrew_icon.png" />
+    <Content Include="Resources\minipokes\Sandshrew_mini.gif" />
+    <None Include="Resources\minipokes\Sandslash_icon.png" />
+    <Content Include="Resources\minipokes\Sandslash_mini.gif" />
+    <None Include="Resources\minipokes\Scyther_icon.png" />
+    <None Include="Resources\minipokes\Seadra_icon.png" />
+    <None Include="Resources\minipokes\Seaking_icon.png" />
+    <None Include="Resources\minipokes\Seel_icon.png" />
+    <None Include="Resources\minipokes\Shellder_icon.png" />
+    <None Include="Resources\minipokes\Slowbro_icon.png" />
+    <None Include="Resources\minipokes\Slowpoke_icon.png" />
+    <None Include="Resources\minipokes\Snorlax_icon.png" />
+    <None Include="Resources\minipokes\Spearow_icon.png" />
+    <Content Include="Resources\minipokes\Spearow_mini.gif" />
+    <None Include="Resources\minipokes\Squirtle_icon.png" />
+    <Content Include="Resources\minipokes\Squirtle_mini.gif" />
+    <None Include="Resources\minipokes\Starmie_icon.png" />
+    <None Include="Resources\minipokes\Staryu_icon.png" />
+    <None Include="Resources\minipokes\Tangela_icon.png" />
+    <None Include="Resources\minipokes\Tauros_icon.png" />
+    <None Include="Resources\minipokes\Tentacool_icon.png" />
+    <None Include="Resources\minipokes\Tentacruel_icon.png" />
+    <None Include="Resources\minipokes\Vaporeon_icon.png" />
+    <None Include="Resources\minipokes\Venomoth_icon.png" />
+    <None Include="Resources\minipokes\Venonat_icon.png" />
+    <None Include="Resources\minipokes\Venusaur_icon.png" />
+    <Content Include="Resources\minipokes\Venusaur_mini.gif" />
+    <None Include="Resources\minipokes\Vileplume_icon.png" />
+    <None Include="Resources\minipokes\Voltorb_icon.png" />
+    <None Include="Resources\minipokes\Vulpix_icon.png" />
+    <None Include="Resources\minipokes\Wartortle_icon.png" />
+    <None Include="Resources\minipokes\Victreebel_icon.png" />
+    <Content Include="Resources\minipokes\Wartortle_mini.gif" />
+    <None Include="Resources\minipokes\Weedle_icon.png" />
+    <Content Include="Resources\minipokes\Weedle_mini.gif" />
+    <None Include="Resources\minipokes\Weepinbell_icon.png" />
+    <None Include="Resources\minipokes\Weezing_icon.png" />
+    <None Include="Resources\minipokes\Wigglytuff_icon.png" />
+    <None Include="Resources\minipokes\Zapdos_icon.png" />
+    <None Include="Resources\minipokes\Zubat_icon.png" />
+    <None Include="Resources\pokes\Abra_NB.gif" />
+    <None Include="Resources\pokes\Aerodactyl_NB.gif" />
+    <None Include="Resources\pokes\Alakazam_NB.gif" />
+    <Content Include="Resources\pokes\Arbok.gif" />
+    <None Include="Resources\pokes\Arcanine_NB.gif" />
+    <None Include="Resources\pokes\Articuno_NB.gif" />
+    <Content Include="Resources\pokes\Beedrill.gif" />
+    <None Include="Resources\pokes\Bellsprout_NB.gif" />
+    <Content Include="Resources\pokes\Blastoise.gif" />
+    <Content Include="Resources\pokes\Bulbasaur.gif" />
+    <Content Include="Resources\pokes\Butterfree.gif" />
+    <Content Include="Resources\pokes\Caterpie.gif" />
+    <None Include="Resources\pokes\Chansey_NB.gif" />
+    <Content Include="Resources\pokes\Charizard.gif" />
+    <Content Include="Resources\pokes\Charmander.gif" />
+    <Content Include="Resources\pokes\Charmeleon.gif" />
+    <None Include="Resources\pokes\Clefable.gif" />
+    <None Include="Resources\pokes\Clefairy.gif" />
+    <None Include="Resources\pokes\Cloyster_NB.gif" />
+    <None Include="Resources\pokes\Cubone_NB.gif" />
+    <None Include="Resources\pokes\Dewgong_NB.gif" />
+    <None Include="Resources\pokes\Diglett_NB.gif" />
+    <None Include="Resources\pokes\Ditto_NB.gif" />
+    <None Include="Resources\pokes\Dodrio_NB.gif" />
+    <None Include="Resources\pokes\Doduo_NB.gif" />
+    <None Include="Resources\pokes\Dragonair_NB.gif" />
+    <None Include="Resources\pokes\Dragonite_NB.gif" />
+    <None Include="Resources\pokes\Dratini_NB.gif" />
+    <None Include="Resources\pokes\Drowzee_NB.gif" />
+    <None Include="Resources\pokes\Dugtrio_NB.gif" />
+    <None Include="Resources\pokes\Eevee_NB.gif" />
+    <Content Include="Resources\pokes\Ekans.gif" />
+    <None Include="Resources\pokes\Electabuzz_NB.gif" />
+    <None Include="Resources\pokes\Electrode_NB.gif" />
+    <None Include="Resources\pokes\Exeggcute_NB.gif" />
+    <None Include="Resources\pokes\Exeggutor_NB.gif" />
+    <None Include="Resources\pokes\Farfetch%27d_NB.gif" />
+    <Content Include="Resources\pokes\Fearow.gif" />
+    <None Include="Resources\pokes\Flareon_NB.gif" />
+    <None Include="Resources\pokes\Gastly_NB.gif" />
+    <None Include="Resources\pokes\Gengar_NB.gif" />
+    <None Include="Resources\pokes\Geodude_NB.gif" />
+    <None Include="Resources\pokes\Gloom_NB.gif" />
+    <None Include="Resources\pokes\Golbat_NB.gif" />
+    <None Include="Resources\pokes\Goldeen_NB.gif" />
+    <None Include="Resources\pokes\Golduck_NB.gif" />
+    <None Include="Resources\pokes\Golem_NB.gif" />
+    <None Include="Resources\pokes\Graveler_NB.gif" />
+    <None Include="Resources\pokes\Grimer_NB.gif" />
+    <None Include="Resources\pokes\Growlithe_NB.gif" />
+    <None Include="Resources\pokes\Gyarados_NB.gif" />
+    <None Include="Resources\pokes\Gyarados_NB_variocolor.gif" />
+    <None Include="Resources\pokes\Haunter_NB.gif" />
+    <None Include="Resources\pokes\Hitmonchan_NB.gif" />
+    <None Include="Resources\pokes\Hitmonlee_NB.gif" />
+    <None Include="Resources\pokes\Horsea_NB.gif" />
+    <None Include="Resources\pokes\Hypno_NB.gif" />
+    <Content Include="Resources\pokes\Ivysaur.gif" />
+    <None Include="Resources\pokes\Jigglypuff_NB.gif" />
+    <None Include="Resources\pokes\Jolteon_NB.gif" />
+    <None Include="Resources\pokes\Jynx_NB.gif" />
+    <None Include="Resources\pokes\Kabuto_NB.gif" />
+    <None Include="Resources\pokes\Kabutops_NB.gif" />
+    <None Include="Resources\pokes\Kadabra_NB.gif" />
+    <Content Include="Resources\pokes\Kakuna.gif" />
+    <None Include="Resources\pokes\Kangaskhan_NB.gif" />
+    <None Include="Resources\pokes\Kingler_NB.gif" />
+    <None Include="Resources\pokes\Koffing_NB.gif" />
+    <None Include="Resources\pokes\Krabby_NB.gif" />
+    <None Include="Resources\pokes\Lapras_NB.gif" />
+    <None Include="Resources\pokes\Lickitung_NB.gif" />
+    <None Include="Resources\pokes\Machamp_NB.gif" />
+    <None Include="Resources\pokes\Machoke_NB.gif" />
+    <None Include="Resources\pokes\Machop_NB.gif" />
+    <None Include="Resources\pokes\Magikarp_NB.gif" />
+    <None Include="Resources\pokes\Magikarp_NB_variocolor.gif" />
+    <None Include="Resources\pokes\Magmar_NB.gif" />
+    <None Include="Resources\pokes\Magnemite_NB.gif" />
+    <None Include="Resources\pokes\Magneton_NB.gif" />
+    <None Include="Resources\pokes\Mankey_NB.gif" />
+    <None Include="Resources\pokes\Marowak_NB.gif" />
+    <None Include="Resources\pokes\Meloetta_danza_NB.gif" />
+    <None Include="Resources\pokes\Meloetta_lírica_NB.gif" />
+    <None Include="Resources\pokes\Meowth_NB.gif" />
+    <Content Include="Resources\pokes\Metapod.gif" />
+    <None Include="Resources\pokes\Mew_NB.gif" />
+    <None Include="Resources\pokes\Mewtwo_NB.gif" />
+    <None Include="Resources\pokes\Moltres_NB.gif" />
+    <None Include="Resources\pokes\Mr._Mime_NB.gif" />
+    <None Include="Resources\pokes\Muk_NB.gif" />
+    <None Include="Resources\pokes\Nidoking.gif" />
+    <None Include="Resources\pokes\Nidoking_NB.gif" />
+    <Content Include="Resources\pokes\Nidoqueen.gif" />
+    <Content Include="Resources\pokes\Nidoran_f.gif" />
+    <None Include="Resources\pokes\Nidoran_m.gif" />
+    <None Include="Resources\pokes\Nidoran_macho_NB.gif" />
+    <Content Include="Resources\pokes\Nidorina.gif" />
+    <None Include="Resources\pokes\Nidorino.gif" />
+    <None Include="Resources\pokes\Nidorino_NB.gif" />
+    <None Include="Resources\pokes\Ninetales_NB.gif" />
+    <None Include="Resources\pokes\Oddish_NB.gif" />
+    <None Include="Resources\pokes\Omanyte_NB.gif" />
+    <None Include="Resources\pokes\Omastar_NB.gif" />
+    <None Include="Resources\pokes\Onix_NB.gif" />
+    <None Include="Resources\pokes\Paras_NB.gif" />
+    <None Include="Resources\pokes\Parasect_NB.gif" />
+    <None Include="Resources\pokes\Persian_NB.gif" />
+    <Content Include="Resources\pokes\Pidgeot.gif" />
+    <Content Include="Resources\pokes\Pidgeotto.gif" />
+    <Content Include="Resources\pokes\Pidgey.gif" />
+    <Content Include="Resources\pokes\Pikachu.gif" />
+    <None Include="Resources\pokes\Pinsir_NB.gif" />
+    <None Include="Resources\pokes\Poliwag_NB.gif" />
+    <None Include="Resources\pokes\Poliwhirl_NB.gif" />
+    <None Include="Resources\pokes\Poliwrath_NB.gif" />
+    <None Include="Resources\pokes\Ponyta_NB.gif" />
+    <None Include="Resources\pokes\Porygon_NB.gif" />
+    <None Include="Resources\pokes\Primeape_NB.gif" />
+    <None Include="Resources\pokes\Psyduck_NB.gif" />
+    <Content Include="Resources\pokes\Raichu.gif" />
+    <None Include="Resources\pokes\Rapidash_NB.gif" />
+    <Content Include="Resources\pokes\Raticate.gif" />
+    <Content Include="Resources\pokes\Rattata.gif" />
+    <None Include="Resources\pokes\Rhydon_NB.gif" />
+    <None Include="Resources\pokes\Rhyhorn_NB.gif" />
+    <Content Include="Resources\pokes\Sandshrew.gif" />
+    <Content Include="Resources\pokes\Sandslash.gif" />
+    <None Include="Resources\pokes\Scyther_NB.gif" />
+    <None Include="Resources\pokes\Seadra_NB.gif" />
+    <None Include="Resources\pokes\Seaking_NB.gif" />
+    <None Include="Resources\pokes\Seel_NB.gif" />
+    <None Include="Resources\pokes\Shellder_NB.gif" />
+    <None Include="Resources\pokes\Slowbro_NB.gif" />
+    <None Include="Resources\pokes\Slowpoke_NB.gif" />
+    <None Include="Resources\pokes\Snorlax_NB.gif" />
+    <Content Include="Resources\pokes\Spearow.gif" />
+    <Content Include="Resources\pokes\Squirtle.gif" />
+    <None Include="Resources\pokes\Starmie_NB.gif" />
+    <None Include="Resources\pokes\Staryu_NB.gif" />
+    <None Include="Resources\pokes\Tangela_NB.gif" />
+    <None Include="Resources\pokes\Tauros_NB.gif" />
+    <None Include="Resources\pokes\Tentacool_NB.gif" />
+    <None Include="Resources\pokes\Tentacruel_NB.gif" />
+    <None Include="Resources\pokes\Vaporeon_NB.gif" />
+    <None Include="Resources\pokes\Venomoth_NB.gif" />
+    <None Include="Resources\pokes\Venonat_NB.gif" />
+    <Content Include="Resources\pokes\Venusaur.gif" />
+    <None Include="Resources\pokes\Victreebel_NB.gif" />
+    <None Include="Resources\pokes\Vileplume_NB.gif" />
+    <None Include="Resources\pokes\Voltorb_NB.gif" />
+    <None Include="Resources\pokes\Vulpix_NB.gif" />
+    <Content Include="Resources\pokes\Wartortle.gif" />
+    <Content Include="Resources\pokes\Weedle.gif" />
+    <None Include="Resources\pokes\Weepinbell_NB.gif" />
+    <None Include="Resources\pokes\Weezing_NB.gif" />
+    <None Include="Resources\pokes\Wigglytuff_NB.gif" />
+    <None Include="Resources\pokes\Zapdos_NB.gif" />
+    <None Include="Resources\pokes\Zubat_NB.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
